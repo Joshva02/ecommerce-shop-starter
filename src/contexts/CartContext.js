@@ -1,4 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react';
+import { v4 } from 'uuid';
 
 
 export const CartContext = createContext()
@@ -10,6 +11,12 @@ const CartProvider = ({children}) => {
   const [itemAmount, setItemAmount] = useState(0)
   //total price
   const [total, setTotal] = useState(0)
+
+  //get product id
+  const linkIds = (uuid, productId) => {
+    return { uuid, productId };
+  };
+  console.log(linkIds)
 
   useEffect(()=> {
     const total = cart.reduce((accumulator, currentItem)=> {

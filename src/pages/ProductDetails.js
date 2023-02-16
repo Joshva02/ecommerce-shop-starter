@@ -6,6 +6,7 @@ import {CartContext} from '../contexts/CartContext'
 
 import {ProductContext} from '../contexts/ProductContext'
 
+
 const ProductDetails = () => {
   //this gets the product id from the url
   const { id } = useParams();
@@ -42,10 +43,16 @@ const ProductDetails = () => {
           $ {parseFloat(price).toFixed(2)}
         </div>
         <p className='mb-8'>{description}</p>
+        <div className='pb-12 flex'>
+          <div>
         <button onClick={()=> addToCart(product, product.id)}
         className='bg-primary py-4 px-8 text-white'>Add to cart</button>
+        </div>
+        {/* Modal */}
+         
+        </div>
       </div>
-        
+  
       </div>  
     </div>
   </section>
