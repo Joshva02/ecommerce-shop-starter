@@ -11,6 +11,9 @@ const CartProvider = ({children}) => {
   const [itemAmount, setItemAmount] = useState(0)
   //total price
   const [total, setTotal] = useState(0)
+  //total price
+  const [shipping, setShipping] = useState(0)
+
 
   //get product id
   const linkIds = (uuid, productId) => {
@@ -104,7 +107,8 @@ const CartProvider = ({children}) => {
      increaseAmount, 
      decreaseAmount, 
      itemAmount, 
-     total,  
+     total, 
+     shipping 
      }}>
     {children}
   </CartContext.Provider>

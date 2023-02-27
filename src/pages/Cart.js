@@ -10,7 +10,7 @@ const Cart = () => {
     const { cart, total }= useContext(CartContext)
 
   return (
-    <section className='pt-32 py-16 lg:py-32 mx-auto container'> 
+    <section className='pt-32 py-16 lg:py-48 mx-auto container'> 
       <div className='flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>
       {cart.map(item => {
         return <CartItem item={item} key={item.id} />
@@ -23,7 +23,7 @@ const Cart = () => {
              <span className='mr-2'> Total:</span> $ {parseFloat(total).toFixed(2)}
            </div>
            {/* clear cart icon */}
-         <Link to='/' className='bg-primary flex p-4 justify-center text-white font-medium'>Checkout</Link>
+         <Link to='/checkout' className='bg-primary flex p-4 justify-center text-white font-medium'>Checkout</Link>
         </div>
         </div>
         </section>

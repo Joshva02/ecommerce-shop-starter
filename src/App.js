@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 
 const App = () => {
   return <div className='overflow-hidden'>
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/checkout' element={<Checkout/>} />
         </Routes> 
         <Sidebar />
         <Footer />
